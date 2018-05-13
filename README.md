@@ -22,7 +22,7 @@ Note these only need to be deployed once.
 kubectl create -f pachd_rolebinding.yaml -f pachd_role.yaml -f pachd_sa.yaml
 ```
 
-Deploy pachyd, etcd
+Deploy pachd, etcd
 ```bash
 terraform init
 terraform apply
