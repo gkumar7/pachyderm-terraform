@@ -1,0 +1,10 @@
+# Required as terraform k8s provider has disabled automount service account
+# This causes issues when the worker pods come up as they do not have the token mounted
+# Refer to https://github.com/terraform-providers/terraform-provider-kubernetes/issues/38
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  labels:
+    app: pachyderm
+    suite: pachyderm
+  name: pachyderm
